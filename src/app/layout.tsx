@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import Headers from "./components/layouts/header";
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -9,7 +10,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "MK Portfolio",
-  description: "",
+  description: "Bienvenue sur le portfolio de MK",
 };
 
 export default function RootLayout({
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body
         className={`${poppins.className} antialiased`}
       >
+        <Headers/>
         {children}
       </body>
     </html>
