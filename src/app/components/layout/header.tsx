@@ -1,13 +1,7 @@
-"use client"
+"use client";
 import Link from "next/link";
-import { useState } from "react";
 
 const Header = () => {
-  const [isClick, setIsClick] = useState(false);
-  const toogleNavbar = () => {
-      console.log('Ca marche')
-      setIsClick(!isClick);
-  }
   return (
     <header className=" fixed ">
       <div className=" top-0 left-0 p-[20px_120px]">
@@ -21,9 +15,6 @@ const Header = () => {
               <Link href={"/"} className=" inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900"> compétence</Link>
               <Link href={"/"} className=" inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900"> projet</Link>
             </div>
-          </div>
-          <div className="">
-            <div className=" md:hidden"></div>
           </div>
         </nav>
       </div>
