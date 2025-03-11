@@ -7,7 +7,7 @@ const Accueil = () => {
   const el = useRef(null);
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ["développeur", "étudiant"],
+      strings: ["Développeur", "Étudiant"],
       startDelay: 300,
       typeSpeed: 150,
       backSpeed: 150,
@@ -22,9 +22,13 @@ const Accueil = () => {
   });
   return (
     <section className=" relative w-full h-screen flex justify-center items-center p-[70px_10%_0]">
-      <h1 className=" text-[3.2rem]  font-[700]">Marnick SAKALA</h1>
-      <h3>ÉTUDIANT EN BTS SIO - OPTION SISR</h3>
-      <span ref={el} />
+      <div className="">
+        <h1 className=" text-[3.2rem]  font-[700]">Marnick SAKALA</h1>
+        <h3 className=" text-[3.2rem]  font-[700]">
+          ÉTUDIANT EN BTS SIO - OPTION SISR
+        </h3>
+        <h3 className=" text-[2.4rem] font-[600]"><span ref={el} /> </h3>
+      </div>
     </section>
   );
 };
