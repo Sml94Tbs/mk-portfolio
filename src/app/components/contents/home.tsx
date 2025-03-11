@@ -7,7 +7,7 @@ const Accueil = () => {
   const el = useRef(null);
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ["Développeur", "Étudiant"],
+      strings: ["Développeur", "Administateur"],
       startDelay: 300,
       typeSpeed: 150,
       backSpeed: 150,
@@ -28,6 +28,7 @@ const Accueil = () => {
           ÉTUDIANT EN BTS SIO - OPTION SISR
         </h3>
         <h3 className=" text-[2.4rem] font-[600]"><span ref={el} /> </h3>
+        <h5 className=" text-[2rem]">Bienvenue sur mon Portfolio Professionnel</h5>
       </div>
     </section>
   );
