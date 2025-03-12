@@ -1,13 +1,14 @@
 "use client";
-import Link from "next/link";
-import { useState } from "react";
-import { IoIosClose, IoIosMenu } from "react-icons/io";
-import LinkHeader from "@/app/components/link.header";
+import Navbar from "@/app/components/nav";
 import NavbarResp from "@/app/components/resp.nav";
-
+import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
+import { IoIosClose, IoIosMenu } from "react-icons/io";
 
 const Header = () => {
   const [isClick, setIsClick] = useState(false);
+  const navRef = useRef(null);
+
   const toogleNavbar = () => {
     console.log("Ca marche");
     setIsClick(!isClick);
@@ -21,11 +22,24 @@ const Header = () => {
     { href: "/#contact", name: "Contact" },
   ];
 
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (navRef.current && !(navRef.current as HTMLElement).contains(event.target as Node)) {
+      setIsClick(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <header className="top-0 left-0 w-full p-[20px_120px] fixed bg-transparent flex items-center justify-between z-[101] backdrop-blur-[16px] max-lg:p-[2rem_3%]">
       <Link
         href={"/"}
-        className="text-[25px] text-black font-[600] cursor-default"
+        className=" animate-slideRight text-[2.5rem] no-underline opacity-0 text-black font-[600] cursor-default max-lg:opacity-100 max-lg:animate-none"
       >
         MK
       </Link>
@@ -35,16 +49,8 @@ const Header = () => {
       >
         {isClick ? <IoIosClose /> : <IoIosMenu />}
       </button>
-      {isClick && (
-        <NavbarResp links={links} />
-      )}
-      <nav className="inline-block max-lg:hidden ">
-        <LinkHeader href="/#accueil" name="Accueil" />
-        <LinkHeader href="/#about" name="A propos" />
-        <LinkHeader href="/#skill" name="Compétence" />
-        <LinkHeader href="/#portfolio" name="Portfolio" />
-        <LinkHeader href="/#contact" name="Contact" />
-      </nav>
+      {isClick && <div ref={navRef}><NavbarResp setIsClick={setIsClick} links={links} /></div>}
+      <Navbar links={links} />
     </header>
   );
 };

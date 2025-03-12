@@ -6,12 +6,13 @@ type navLink = {
 }
 type naveProps = {
     links: navLink[];
+    setIsClick: React.Dispatch<React.SetStateAction<boolean>>;
 };
-const navbar: React.FC<naveProps> = ({ links }) => {
+const navbar: React.FC<naveProps> = ({ links, setIsClick }) => {
     return (
-        <nav className="hidden max-lg:block absolute top-full left-0 w-full p-[1rem_3%] bg-[#462956d4] backdrop-blur-[16px] border-t-[.1rem] border-t-solid border-t-[#0000001a] drop-shadow-[0_.5rem_1rem_#0000001a]">
+        <nav className="hidden max-lg:block absolute rounded-[2rem] top-full left-0 w-full p-[5rem_9%] bg-[#ffffffd4] backdrop-blur-[16px] border-t-[.1rem] border-t-solid border-t-[#00000034] drop-shadow-[0_.5rem_1rem_#000000be]">
             {links.map(( link, index) => (
-                <RespNav key={index} href={link.href} name={link.name}/>
+                <RespNav key={index} href={link.href} name={link.name} setIsClick={setIsClick}/>
             ))}
         </nav>
     )

@@ -10,9 +10,9 @@ type naveProps = {
 
 const Navbar: React.FC<naveProps> = ({ links }) => {
     return(
-        <nav>
+        <nav className=" inline-block max-lg:hidden">
             {links.map(( link, index) => (
-                <LinkHeader key={index} href={link.href} name={link.name}/>
+                <LinkHeader index={index} key={index} href={link.href} name={link.name}/>
             ))}
         </nav>
     )
