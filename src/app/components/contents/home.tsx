@@ -1,37 +1,43 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import ScrollReveal from "scrollreveal";
-import Typed from "typed.js";
 
 const Accueil = () => {
   const el = useRef(null);
   useEffect(() => {
-    ScrollReveal({
-      reset: true,
-      distance: "80px",
-      duration: 2000,
-      delay: 200,
-    });
+    if (typeof window !== "undefined") {
+      import("scrollreveal").then((module) => {
+        const ScrollReveal = module.default;
+        ScrollReveal({
+          reset: true,
+          distance: "80px",
+          duration: 2000,
+          delay: 200,
+        });
 
-    ScrollReveal().reveal('.acceuil-contenu', { origin: 'top' });
-    ScrollReveal().reveal('.acceuil-contenu h1', { origin: 'left' });
-    ScrollReveal().reveal('.acceuil-contenu p', { origin: 'right' });
-
-    const typed = new Typed(el.current, {
-      strings: ["Développeur", "Administateur"],
-      startDelay: 300,
-      typeSpeed: 150,
-      backSpeed: 150,
-      backDelay: 1000,
-      smartBackspace: true,
-      showCursor: true,
-      loop: true,
-    });
-    return () => {
-      typed.destroy();
-    };
-  });
+        ScrollReveal().reveal(".acceuil-contenu", { origin: "top" });
+        ScrollReveal().reveal(".acceuil-contenu h1", { origin: "left" });
+        ScrollReveal().reveal(".acceuil-contenu p", { origin: "right" });
+      });
+    }
+    import('typed.js').then((module) => {
+      const Typed = module.default;
+      const typed = new Typed(el.current, {
+        strings: ["Développeur", "Administateur"],
+        startDelay: 300,
+        typeSpeed: 150,
+        backSpeed: 150,
+        backDelay: 1000,
+        smartBackspace: true,
+        showCursor: true,
+        loop: true,
+      });
+      return () => {
+        typed.destroy();
+      };
+    })
+   
+  }, []);
   return (
     <section className=" relative w-full h-screen flex justify-center items-center p-[70px_10%_0]">
       <div className=" acceuil-contenu">
