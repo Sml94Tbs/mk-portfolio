@@ -2,7 +2,9 @@ import Accueil from "./components/contents/home";
 export default function Home() {
   return (
     <main>
-      <Accueil />
+      <div id="accueil">
+      <Accueil/>
+      </div>
     </main>
   );
 }
