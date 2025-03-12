@@ -1,11 +1,23 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import ScrollReveal from "scrollreveal";
 import Typed from "typed.js";
 
 const Accueil = () => {
   const el = useRef(null);
   useEffect(() => {
+    ScrollReveal({
+      reset: true,
+      distance: "80px",
+      duration: 2000,
+      delay: 200,
+    });
+
+    ScrollReveal().reveal('.acceuil-contenu', { origin: 'top' });
+    ScrollReveal().reveal('.acceuil-contenu h1', { origin: 'left' });
+    ScrollReveal().reveal('.acceuil-contenu p', { origin: 'right' });
+
     const typed = new Typed(el.current, {
       strings: ["Développeur", "Administateur"],
       startDelay: 300,
@@ -22,13 +34,17 @@ const Accueil = () => {
   });
   return (
     <section className=" relative w-full h-screen flex justify-center items-center p-[70px_10%_0]">
-      <div className="">
+      <div className=" acceuil-contenu">
         <h1 className=" text-[3.2rem]  font-[700]">Marnick SAKALA</h1>
-        <h3 className=" text-[3.2rem]  font-[700]">
+        <h3 className=" text-[3.2rem] animate-slideBottom duration-[.7s]  font-[700] ">
           ÉTUDIANT EN BTS SIO - OPTION SISR
         </h3>
-        <h3 className=" text-[2.4rem] font-[600]"><span ref={el} /> </h3>
-        <h5 className=" text-[2rem]">Bienvenue sur mon Portfolio Professionnel</h5>
+        <h3 className=" text-[2.4rem] font-[600] animate-slideTop">
+          <span ref={el} />{" "}
+        </h3>
+        <h5 className=" text-[2rem]">
+          Bienvenue sur mon Portfolio Professionnel
+        </h5>
       </div>
     </section>
   );
