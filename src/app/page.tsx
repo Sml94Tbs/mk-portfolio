@@ -3,8 +3,12 @@ import Accueil from "@/app/components/contents/home";
 export default function Home() {
   return (
     <main>
-      <Accueil />
-      <About/>
+      <div id="accueil">
+        <Accueil />
+      </div>
+      <div id="about">
+        <About />
+      </div>
     </main>
   );
 }
