@@ -1,17 +1,13 @@
-"use client"
+"use client";
 
 import Link from "next/link";
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode, useMemo } from "react";
 
 const Icon = ({ icon }: { icon: ReactNode }) => {
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
+  const isClient = useMemo(() => typeof window !== "undefined", []);
 
   if (!isClient) {
-    return null; // ou un spinner/loader
+    return null; // ou un loader
   }
 
   return (
