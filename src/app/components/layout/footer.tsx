@@ -1,10 +1,5 @@
-"use client";
-
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
-import Icon from "../icon";
-import { useState, useEffect } from "react";
-
 const Footer = () => {
   return (
     <footer className=" bg-[#2C3E50]">
