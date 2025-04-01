@@ -25,7 +25,7 @@ const Projets = ({ projets, sections }: ProjetsProps) => {
         ))
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {projets.map((projet, i) => (
+          {(projets ?? []).map((projet, i) => (
             <div key={i} className=" bg-gray-700  p-4 shadow-lg rounded-lg">
               <h3 className=" text-xl font-bold">{projet.titre}</h3>
               <p className="text-gray-400">{projet.date}</p>
