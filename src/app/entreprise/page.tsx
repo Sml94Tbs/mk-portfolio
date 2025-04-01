@@ -9,11 +9,11 @@ import { useState } from "react";
 const Entreprise = () => {
   const sections = [
     {
-      titreSection: "Travaux réalisés en entreprise - 1ère Année",
+      titreSection: "Projet réalisés en 1ère Année",
       projets: projetEntreprisePremiereAnnee,
     },
     {
-      titreSection: "Travaux réalisés en entreprise - 2ème Année",
+      titreSection: "Projet réalisés en 2ème Année",
       projets: projetEntrepriseDeuxiemeAnnee,
     },
   ];
@@ -22,8 +22,8 @@ const Entreprise = () => {
     annee === 1 ? projetEntreprisePremiereAnnee : projetEntrepriseDeuxiemeAnnee;
   return (
     <section className="bg-[#2C3E50] text-white">
-      <h1 className="text-4xl font-bold text-center mb-6">
-        Expérience en Entreprise
+      <h1 className="text-[4.5rem] font-bold text-center mb-6">
+      Réalisation professionnelles en entreprise
       </h1>
       <Projets sections={sections} />
     </section>
