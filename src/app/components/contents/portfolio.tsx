@@ -12,8 +12,8 @@ const Portfolio = () => {
         </h3>
       </div>
       <div className=" grid grid-cols-[repeat(2,_1fr)] items-center gap-[2.5rem] max-sm:grid-cols-[1fr]">
-        <CardProjet titre="A l'école" image="/images/saber.jpg" link="school" />
-        <CardProjet titre="En entreprise" link="/Bonjour" image="/images/saber.jpg" />
+        <CardProjet titre="A l'école" image="/images/vn.jpg" link="school" />
+        <CardProjet titre="En entreprise" link="/entreprise" image="/images/work.png" />
       </div>
     </section>
   );

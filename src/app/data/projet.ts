@@ -1,4 +1,6 @@
-export const projetEcole = [
+import { Projet, SectionProjets } from "@/app/types/project";
+
+export const projetEcole: Projet[] = [
     {
         titre : "Créer des machines virtuelles sur Vmware"	, date :"02/11/2023 au 02/12/2023"
     },
@@ -58,7 +60,7 @@ export const projetEcole = [
     }
 ]
 
-export const projetEntreprisePremiereAnnee = [
+export const projetEntreprisePremiereAnnee: Projet[] = [
     {
         titre : "Gestion des identités et des accès utilisateurs (Active Directory, LDAP, Azure AD).", date :	"06/12/2023 au 04/09/2024"
     },
@@ -109,7 +111,7 @@ export const projetEntreprisePremiereAnnee = [
     },
 ]
 
-export const projetEntrepriseDeuxiemeAnnee = [
+export const projetEntrepriseDeuxiemeAnnee: Projet[] = [
     {
         titre : "Supervision de la réparation et remise en production."	, date :"04/09/2024 au 17/06/2025"
     },
