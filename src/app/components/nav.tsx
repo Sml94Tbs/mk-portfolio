@@ -6,13 +6,14 @@ type navLink = {
 }
 type naveProps = {
     links: navLink[];
+    isScoll: boolean;
 };
 
-const Navbar: React.FC<naveProps> = ({ links }) => {
+const Navbar: React.FC<naveProps> = ({ links, isScoll }) => {
     return(
         <nav className=" inline-block max-lg:hidden">
             {links.map(( link, index) => (
-                <LinkHeader index={index} key={index} href={link.href} name={link.name}/>
+                <LinkHeader index={index} key={index} href={link.href} name={link.name} isScoll={isScoll}/>
             ))}
         </nav>
     )
