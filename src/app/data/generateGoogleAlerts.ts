@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename);
 const parser = new Parser();
 
 async function fetchAndWriteFeed() {
-  const feed = await parser.parseURL('https://www.google.fr/alerts/feeds/03186188144268102640/14638753948445503740');
+  const feed = await parser.parseURL('https://www.google.fr/alerts/feeds/03186188144268102640/6897667250426976061');
 
   const cleanedItems = feed.items.map(item => ({
     title: item.title,
