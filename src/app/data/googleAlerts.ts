@@ -6,6 +6,12 @@ export const googleAlerts = [
     "snippet": "Download games based on Ren'Py, RPGM, Unity, Unreal Engine and enjoy the gaming process, and if you have any questions, contact us for help! Email – ..."
   },
   {
+    "title": "MY GAME CRASHED : r/<b>RenPy</b> - Reddit",
+    "link": "https://www.google.com/url?rct=j&sa=t&url=https://www.reddit.com/r/RenPy/comments/1js3pjc/my_game_crashed/&ct=ga&cd=CAIyGzhkMmVjYThmY2E1Yjc1OGQ6ZnI6ZnI6RlI6TA&usg=AOvVaw0VMkzz4tEHQXhOmTn76psn",
+    "pubDate": "2025-04-05T14:53:57.000Z",
+    "snippet": "I think it,s a renpy error and i don,t know how to fix it It happened when the player wrote B of \"Bob \" in the players name he was playing the…"
+  },
+  {
     "title": "Downloader for Large Games? : r/<b>RenPy</b> - Reddit",
     "link": "https://www.google.com/url?rct=j&sa=t&url=https://www.reddit.com/r/RenPy/comments/1js12dw/downloader_for_large_games/&ct=ga&cd=CAIyGzhkMmVjYThmY2E1Yjc1OGQ6ZnI6ZnI6RlI6TA&usg=AOvVaw2Jc4dNiMWsjwYQGnnNSYZ9",
     "pubDate": "2025-04-05T11:53:33.000Z",
@@ -106,12 +112,6 @@ export const googleAlerts = [
     "link": "https://www.google.com/url?rct=j&sa=t&url=https://lemmasoft.renai.us/forums/viewtopic.php%3Ft%3D69639&ct=ga&cd=CAIyGzhkMmVjYThmY2E1Yjc1OGQ6ZnI6ZnI6RlI6TA&usg=AOvVaw0_GB7tYnAcb_RyTNuVrrs2",
     "pubDate": "2025-04-04T17:55:56.000Z",
     "snippet": "Our team is very small, literally 4 of us, so we are requesting the expertise and direction of a programmer familiar with Ren'Py, specifically visual ..."
-  },
-  {
-    "title": "Crece la presión <b>en</b> la Justicia para que García-Mansilla renuncie a la Corte tras el rechazo ...",
-    "link": "https://www.google.com/url?rct=j&sa=t&url=https://www.lineasindical.com.ar/crece-presion-justicia-para-garcia-mansilla-renuncie-corte-tras-rechazo-senado-n-1748558.html&ct=ga&cd=CAIyGzhkMmVjYThmY2E1Yjc1OGQ6ZnI6ZnI6RlI6TA&usg=AOvVaw2vZTUkvKMvjYVNO0Ljo2w6",
-    "pubDate": "2025-04-04T17:11:06.000Z",
-    "snippet": "En el Palacio de Justicia y en Comodoro Py aseguran que el postulante del Presidente no debería ingresar ni a su actual despacho. Mauricio Caminos."
   },
   {
     "title": "v1.1.1 - Python Union Type Fix - <b>Ren</b>&#39;<b>Py</b> Color Picker by Foxcapades - itch.io",
