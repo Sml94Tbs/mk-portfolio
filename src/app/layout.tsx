@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" data-nighteye="disabled">
-      <body>
+      <body className=" overflow-x-hidden">
         <Header/>
         {children}
         <Footer/>
