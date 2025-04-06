@@ -25,7 +25,7 @@ const Portfolio = () => {
   return (
     <section className=" bg-[#2C3E50]">
       <div className=" text-center">
-        <h1 className=" text-white text-[4.5rem] font-[700] leading-[1.2] wsh2 mb-[5rem]">
+        <h1 className=" text-white text-[4.5rem] max-lg:text-[3.2rem] font-[700] leading-[1.2] wsh2 mb-[5rem]">
           Mes Réalisation Professionnelles
         </h1>
         <h3 className=" wsh text-white text-[1.6rem] mb-[5rem]">

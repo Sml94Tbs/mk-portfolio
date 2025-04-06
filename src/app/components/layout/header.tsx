@@ -56,7 +56,7 @@ const Header = () => {
         MK
       </Link>
       <button
-        className=" hidden max-lg:block text-[3.2rem] text-black"
+        className={`hidden max-lg:block text-[3.2rem] ${isScroll ? "text-white" : "text-black"}`}
         onClick={toogleNavbar}
       >
         {isClick ? <IoIosClose /> : <IoIosMenu />}
