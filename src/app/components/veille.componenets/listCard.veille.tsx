@@ -6,8 +6,7 @@ const ListCard = () => {
     keyof typeof googleAlerts | "all"
   >("all");
 
-  const allAlerts = Object.keys(googleAlerts)
-    .flat()
+  const allAlerts = Object.keys(googleAlerts).flat();
 
   const filteredAlerts =
     selectedCategory === "all"
@@ -23,18 +22,22 @@ const ListCard = () => {
             selectedCategory === "all" ? "bg-white text-black" : "border-white"
           }`}
           onClick={() => setSelectedCategory("all")}
+        >
+          Tous
+        </button>
+        {allAlerts.map((index) => (
+          <button
+            key={index}
+            className={`px-4 py-2 rounded-full border ${
+              selectedCategory === index
+                ? "bg-white text-black"
+                : "border-white"
+            }`}
+            onClick={() => setSelectedCategory(index)}
           >
-            Tous
+            {index}
           </button>
-          {allAlerts.map((index) => (
-            <button key={index} className={`px-4 py-2 rounded-full border ${
-                selectedCategory === index ? "bg-white text-black" : "border-white"
-              }`}
-              onClick={() => setSelectedCategory(index)}
-              >
-                {index}
-            </button>
-          ))}
+        ))}
       </div>
       <div className="  grid grid-cols-[repeat(4,_1fr)] gap-[1.6rem] max-xl:grid-cols-[repeat(2,_1fr)] max-lg:grid-cols-[repeat(1,_1fr)]">
         {filteredAlerts.map((alert, index) => (
