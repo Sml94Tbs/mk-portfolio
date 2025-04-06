@@ -18,7 +18,7 @@ const ListCard = () => {
       {/* Button de sélection */}
       <div className="flex justify-center flex-wrap gap-4 mb-6">
         <button
-          className={`px-4 py-2 rounded-full border ${
+          className={`px-4 text-[1.2rem]  transition-[cubic-bezier(0.25_0.1_0.25_1.0)] duration-[.5s] py-2 rounded-full border ${
             selectedCategory === "all" ? "bg-white text-black" : "border-white"
           }`}
           onClick={() => setSelectedCategory("all")}
@@ -28,7 +28,7 @@ const ListCard = () => {
         {allAlerts.map((index) => (
           <button
             key={index}
-            className={`px-4 py-2 rounded-full border ${
+            className={`px-4 text-[1.2rem]  transition-[cubic-bezier(0.25_0.1_0.25_1.0)] duration-[.5s] py-2 rounded-full border ${
               selectedCategory === index
                 ? "bg-white text-black"
                 : "border-white"
@@ -51,7 +51,7 @@ const ListCard = () => {
             />
           ))
         ) : (
-          <div className="col-span-full text-center text-gray-400 text-lg italic">
+          <div className="col-span-full text-center text-gray-400 text-[1.2rem] italic">
             Aucune alerte disponible pour cette catégorie.
           </div>
         )}
