@@ -1,6 +1,8 @@
 "use client";
 import ListSKill from "@/app/components/list.skill";
 import { useEffect } from "react";
+import { TbCertificate } from "react-icons/tb";
+import ListCertif from "../list.certif";
 const Skill = () => {
   const skill = [
     {
@@ -18,6 +20,16 @@ const Skill = () => {
     {
       titre: "Sécurité Informatique",
       skill: "Pare-feu, VPN, IDS/IPS",
+    },
+  ];
+  const certif = [
+    {
+      titre: "Cisco CCNA ",
+      statue: "EN préparation",
+    },
+    {
+      titre: "Microsoft Azure Fundamentals AZ-900",
+      statue: "A venir",
     },
   ];
   useEffect(() => {
@@ -44,8 +56,18 @@ const Skill = () => {
         Mes Compétences Techniques
       </h1>
       <div className="skill h-screen">
-        <ListSKill skills={skill} />
+        <div>
+          <ListSKill skills={skill} />
+        </div>
+        <div className=" flex justify-center items-center gap-5 ">
+          <h3 className=" text-white font-bold text-center text-[2.4rem]">
+            Mes certification 
+          </h3>
+          <TbCertificate className=" text-white text-[2.4rem]" />
+        </div>
+        <ListCertif certif={certif} />
       </div>
+      <div></div>
     </section>
   );
 };
