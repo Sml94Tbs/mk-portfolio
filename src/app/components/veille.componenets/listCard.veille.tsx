@@ -2,16 +2,13 @@ import CardVeille from "@/app/components/veille.componenets/card.veille";
 import { googleAlerts } from "@/app/data/googleAlerts";
 import { useState } from "react";
 const ListCard = () => {
-  const [selectedCategory, setSelectedCategory] = useState<
-    keyof typeof googleAlerts | "all"
-  >("all");
-
-  const allAlerts = Object.keys(googleAlerts).flat();
-
-  const filteredAlerts =
-    selectedCategory === "all"
-      ? Object.values(googleAlerts).flat()
-      : googleAlerts[selectedCategory] || [];
+  const [selectedCategory, setSelectedCategory] = useState<keyof typeof googleAlerts | "all">("all");
+  
+  const allAlerts = Object.keys(googleAlerts) as (keyof typeof googleAlerts)[];
+  
+  const filteredAlerts = selectedCategory === "all"
+    ? Object.values(googleAlerts).flat()
+    : googleAlerts[selectedCategory] || [];
 
   return (
     <div className=" p-4 text-white">
