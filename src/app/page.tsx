@@ -7,9 +7,6 @@ export default function Home() {
   return (
     <main>
       <div id="accueil">
-<<<<<<< HEAD
-      <Accueil/>
-=======
         <Accueil />
       </div>
       <div id="about">
@@ -23,7 +20,6 @@ export default function Home() {
       </div>
       <div id="contact">
         <Veille />
->>>>>>> master
       </div>
     </main>
   );

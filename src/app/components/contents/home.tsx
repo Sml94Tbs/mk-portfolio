@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import ButtonHome from "../button.home";
 const Accueil = () => {
   const el = useRef(null);
   useEffect(() => {
@@ -51,6 +52,9 @@ const Accueil = () => {
         <h5 className=" text-[2rem]">
           Bienvenue sur mon Portfolio Professionnel
         </h5>
+        <div>
+        <ButtonHome icon={<FaGithub/>} />
+        </div>
       </div>
     </section>
   );
