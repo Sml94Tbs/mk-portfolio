@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./components/layout/header";
-import Footer from "./components/layout/footer";
+import Footer from "./components/layout/footer";  
 
 
 
@@ -16,8 +16,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
-      <body>
+    <html lang="fr" data-nighteye="disabled">
+      <body className=" overflow-x-hidden">
         <Header/>
         {children}
         <Footer/>
