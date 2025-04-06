@@ -21,7 +21,7 @@ const Accueil = () => {
         ScrollReveal().reveal(".acceuil-contenu p", { origin: "right" });
       });
     }
-    import('typed.js').then((module) => {
+    import("typed.js").then((module) => {
       const Typed = module.default;
       const typed = new Typed(el.current, {
         strings: ["Développeur", "Administateur"],
@@ -36,8 +36,7 @@ const Accueil = () => {
       return () => {
         typed.destroy();
       };
-    })
-   
+    });
   }, []);
   return (
     <section className=" relative w-full h-screen flex justify-center items-center p-[70px_10%_0]">
@@ -52,8 +51,17 @@ const Accueil = () => {
         <h5 className=" text-[2rem]">
           Bienvenue sur mon Portfolio Professionnel
         </h5>
-        <div>
-        <ButtonHome icon={<FaGithub/>} />
+        <div className=" flex gap-5 mt-[2rem] justify-center">
+          <ButtonHome
+            icon={<FaGithub />}
+            link="https://bonjouer"
+            reseau="GitHub"
+          />
+          <ButtonHome
+            icon={<FaLinkedin />}
+            link="https://bonjouer"
+            reseau="Linkedin"
+          />
         </div>
       </div>
     </section>
