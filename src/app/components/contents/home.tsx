@@ -54,12 +54,12 @@ const Accueil = () => {
         <div className=" flex gap-5 mt-[2rem] justify-center">
           <ButtonHome
             icon={<FaGithub />}
-            link="https://bonjouer"
+            link="https://github.com/Minnho8"
             reseau="GitHub"
           />
           <ButtonHome
             icon={<FaLinkedin />}
-            link="https://bonjouer"
+            link="https://www.linkedin.com/in/marnick-sakala-97017724b/"
             reseau="Linkedin"
           />
         </div>
