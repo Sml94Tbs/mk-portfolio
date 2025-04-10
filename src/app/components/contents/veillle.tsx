@@ -1,6 +1,9 @@
 "use client";
 import ListCard from "@/app/components/veille.componenets/listCard.veille";
+import ButtonVeille from "@/app/components/veille.componenets/button.veille";
 import { useEffect, useRef } from "react";
+import { FaRegArrowAltCircleUp } from "react-icons/fa";
+import ButtonHome from "../button.home";
 const Veille = () => {
   const el = useRef(null);
   useEffect(() => {
@@ -47,8 +50,10 @@ const Veille = () => {
           <p>Sujet de la veille :</p>
           <span ref={el} />
         </div>
+        <div className=" flex h-[50vh] items-center justify-center">
+          <ButtonVeille link="veille" icon={<FaRegArrowAltCircleUp/>} reseau="Voir plus"/>
+        </div>
       </div>
-      <ListCard />
     </section>
   );
 };
