@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
 const Footer = () => {
@@ -12,10 +13,10 @@ const Footer = () => {
           <IoMail />
         </i>
         <i className="p-7 border-solid rounded-[10px] hover:bg-white hover:text-black hover:border-[#fff] transition-[cubic-bezier(0.25_0.1_0.25_1.0)] duration-[.5s]">
-          <FaLinkedin />
+          <Link href={"https://www.linkedin.com/in/marnick-sakala-97017724b/"}><FaLinkedin /></Link>
         </i>
         <i className="p-7 border-solid rounded-[10px] hover:bg-white hover:text-black hover:border-[#fff] transition-[cubic-bezier(0.25_0.1_0.25_1.0)] duration-[.5s]">
-          <FaGithub />
+          <Link href={"https://github.com/Minnho8"} target="_blank"><FaGithub /></Link>
         </i>
       </div>
       <p className=" text-center text-white text-[1.4rem]">
